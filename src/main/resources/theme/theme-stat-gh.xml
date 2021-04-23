@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【入院人次信息】 -->
+	<themeName theme_key="stat_gh">
+		<inds>
+			<ind   indKey="index_mjzl"   title="stat_gh_rc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="type" dim="DIM0000649" />
+		</slumn>
+	</themeName>
+</theme>

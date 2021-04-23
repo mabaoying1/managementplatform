@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+	<!-- 财务药品收入统计 -->
+	<themeName theme_key="cw_ypsr_tj">
+		<inds>
+			<ind    indKey="cw_mz_ypsr"/>
+			<ind    indKey="cw_zy_ypsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<!-- 挂号来源 -->
+			<elumn key="fylb" dim="DIM0000649" />
+		</slumn>
+
+	</themeName>
+	<!-- 业务药品收入统计 -->
+	<themeName theme_key="yw_ypsr_tj">
+		<inds>
+			<ind indKey="mz_ypsr"/>
+			<ind indKey="zy_ypsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<!-- 收入来源 -->
+			<elumn key="srlb" dim="DIM0001370" />
+		</slumn>
+
+	</themeName>
+	<!-- 财务药品收入汇总 -->
+	<themeName theme_key="cw_ypsr_zb">
+		<inds>
+			<ind  indKey="cw_mz_ypsr"/>
+			<ind  indKey="cw_zy_ypsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+        <slumn>
+            <elumn key="dimMonth" dim="DIM0000003" />
+        </slumn>
+		<param>
+			<parameter dim="DIM0001370" dim_key="fylb" value="" />
+		</param>
+		<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+		<!--  業务药品收入汇总-->
+	<themeName theme_key="yw_ypsr_zb">
+		<inds>
+			<ind  indKey="mz_ypsr"/>
+			<ind  indKey="zy_ypsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dimMonth" dim="DIM0000003" />
+		</slumn>
+		<param>
+			<parameter dim="DIM0001370" dim_key="fylb" value="" />
+		</param>
+		<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+</theme>

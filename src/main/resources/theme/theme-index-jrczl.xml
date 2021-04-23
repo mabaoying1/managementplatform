@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+	<!-- 【app index 今日医生出诊量】 -->
+	<themeName theme_key="index_jrczl">
+		<inds>
+			<ind  indKey="index_jrczl_ap" title="index_jrczl_ap" />
+		<!-- 	<ind indID="INDSC00001" indKey="index_jrczl_pjmzl" title="index_jrczl_pjmzl" />
+			<ind indID="INDSC00002" indKey="index_jrczl_pjcfje" title="index_jrczl_pjcfje" />
+			<ind indID="INDSC00003" indKey="index_jrczl_pjcfl" title="index_jrczl_pjcflf" /> -->
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+</theme>

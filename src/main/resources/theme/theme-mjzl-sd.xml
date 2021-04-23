@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!--门诊人次     按时段分组 -->
+	<themeName theme_key="index_mjzl_sd">
+		<inds>
+			<ind   indKey="index_mjzl"   title="index_mjzl"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<!-- <slumn>
+			<elumn key="dateTime" dim="DIM0000865" />
+		</slumn> -->
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000865" />
+							<!-- 挂号类型 0.门诊 1.急诊 -->
+				<!-- <elumn  key="type"  dim="DIM0001532" /> -->
+		</slumn>
+		<!-- <param>
+			<parameter dim_key="type"  dim="DIM0001532"   value="" />
+		</param>  -->
+	</themeName>
+	
+	<!--急诊人次     按时段分组 -->
+	<themeName theme_key="index_jzl_sd">
+		<inds>
+			<ind   indKey="index_jzl"   title="index_jzl"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<!-- <slumn>
+			<elumn key="dateTime" dim="DIM0000865" />
+		</slumn> -->
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000865" />
+							<!-- 挂号类型 0.门诊 1.急诊 -->
+				<!-- <elumn  key="type"  dim="DIM0001532" /> -->
+		</slumn>
+		<!-- <param>
+			<parameter dim_key="type"  dim="DIM0001532"   value="" />
+		</param>  -->
+	</themeName>
+		<!--门急诊挂号人次  汇总 -->
+	<themeName theme_key="mjzlrc_total">
+		<inds>
+			<ind     indKey="index_mzghrc"    title="mjzlrc" />
+			<ind     indKey="index_jzghrc"    title="jzlrc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>index_mjzlindex_mjzl
+			<elumn key="dimMonth" dim="DIM0000003" />
+		</slumn>
+		<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+	<!-- 门急诊人次  汇总   按日期和挂号类型分组-->
+	<themeName theme_key="index_mjzl">
+		<inds>
+			<ind indKey="index_mjzl"    title="mzghrc"    />
+			<ind indKey="index_jzl"    title="jzghrc"    />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<!--<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />-->
+							<!-- 挂号类型 1.门诊 2.急诊 
+				<elumn  key="type"  dim="DIM0000494" />
+		</slumn> -->
+		<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+		
+</theme>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+		<!-- 【app     index 首页   医生排班 上午】 -->
+	<themeName theme_key="index_mzgh_sw">
+		<inds>
+			<ind indID="INDB001903"   indKey="index_jrczl_ap"  title="index_mzgh_ind" />
+		</inds>
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />
+							<!-- 科室 -->
+				<elumn  key="dept"  dim="DIM0001278" />
+						<!-- 医生 -->
+				<elumn  key="doctor"   dim="DIM0000282" />
+						<!-- 上下午时段 -->
+				<elumn key="sd"   dim="DIM0001445" />
+						<!--余号 -->
+				<elumn key="yh"   dim="DIM0001448" />
+						<!-- 总号数 -->
+				<elumn  key="zhs"  dim="DIM0001447" />		
+		</slumn>
+				<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<!-- 动态参数对  -->
+		<param>
+			<parameter dim="DIM0001445"     dim_key="sd"    value="上午"/>
+		</param>
+	</themeName>
+		<!-- 【app     index 首页   医生排班 下午】 -->
+	<themeName theme_key="index_mzgh_xw">
+		<inds>
+			<ind indID="INDB001903"   indKey="index_jrczl_ap"  title="index_mzgh_ind" />
+		</inds>
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />
+							<!-- 科室 -->
+				<elumn  key="dept"  dim="DIM0001278" />
+						<!-- 医生 -->
+				<elumn  key="doctor"   dim="DIM0000282" />
+						<!-- 上下午时段 -->
+				<elumn key="sd"   dim="DIM0001445" />
+						<!--余号 -->
+				<elumn key="yh"   dim="DIM0001448" />
+						<!-- 总号数 -->
+				<elumn  key="zhs"  dim="DIM0001447" />		
+		</slumn>
+				<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<!-- 动态参数对 逗号分隔 -->
+			<param>
+			<parameter dim="DIM0001445"     dim_key="sd"    value="下午"/>
+		</param>
+	</themeName>
+</theme>

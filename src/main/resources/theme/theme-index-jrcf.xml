@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【今日处方数量】 -->
+	<themeName theme_key="index_jrcf">
+		<inds>
+			<ind  indKey="jrcf_mzcfs"   title="jrcf_mzcfs"/>
+			<ind  indKey="jrcf_cfmx" title="jrcf_cfmx"/>
+			<ind  indKey="jrcf_cfmx_max" title="jrcf_cfmx_max"/>
+			<ind  indKey="jrcf_cfmx_min"  title="jrcf_cfmx_min"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+</theme>

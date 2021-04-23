@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+	<!-- 【出院数量】 按日期分组 -->
+	<themeName theme_key="index_cryxx_day">
+		<inds>
+			<ind  indKey="index_cryxx_jrryrc" title="index_cryxx_jrryrc" />
+			<ind  indKey="index_cryxx_drcyrc" title="index_cryxx_drcyrc" />
+			<ind  indKey="index_cryxx_drzyrc" title="index_cryxx_drzyrc" />
+			<ind  indKey="index_cryxx_cwxx" title="index_cryxx_cwxx" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+	
+	<!-- 【出院数量】 按科室、日期分组 DIM0000584-->
+	<themeName theme_key="index_cryxx_office">
+		<inds>
+			<ind indKey="index_cryxx_zywzrc" title="index_cryxx_zywzrc" />
+			<ind indKey="index_cryxx_jrryrc" title="index_cryxx_jrryrc" />
+			<ind indKey="index_cryxx_drcyrc" title="index_cryxx_drcyrc" />
+			<ind indKey="index_cryxx_drzyrc" title="index_cryxx_drzyrc" />
+			<ind indKey="index_cryxx_cwxx" title="index_cryxx_cwxx" />
+		</inds>
+				<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+					<elumn key="office" dim="DIM0001278" />
+		</slumn>
+	</themeName>
+	
+	<!-- 【出院数量】 汇总统计-->
+	<themeName theme_key="cryxx_total">
+		<inds>
+			<ind  indKey="index_cryxx_jrryrc" title="ryxx_jrryrc" />
+			<ind  indKey="index_cryxx_drcyrc" title="cryxx_drcyrc" />
+			<ind  indKey="index_cryxx_drzyrc" title="cryxx_drzyrc" />
+			<ind  indKey="index_cryxx_cwxx" title="cryxx_cwxx" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dimMonth" dim="DIM0000003" />
+		</slumn>
+		<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+	<!-- 【出院数量】 -->
+	<themeName theme_key="index_cryxx">
+		<inds>
+			<ind  indKey="index_cryxx_jrryrc" title="index_cryxx_jrryrc" />
+			<ind  indKey="index_cryxx_drcyrc" title="index_cryxx_drcyrc" />
+			<ind  indKey="index_cryxx_drzyrc" title="index_cryxx_drzyrc" />
+			<ind  indKey="index_cryxx_cwxx" title="index_cryxx_cwxx" />
+			<ind  indKey="index_cryxx_zywzrc" title="zywzrc" />
+			
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+	
+	
+		<!-- 【在院人員信息】 -->
+	<themeName theme_key="index_zyxx">
+		<inds>
+			<ind indID="INDB001781" indKey="index_cryxx_drzyrc" title="index_zyxx_wz" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />
+			<!-- wzlx 是否危重 -->
+			<elumn key="wzlx" dim="DIM0001107" />
+		</slumn>
+		<param>
+			<parameter dim_key="wz"  dim="DIM0001107"  value="1" />
+		</param>
+	</themeName>
+</theme>

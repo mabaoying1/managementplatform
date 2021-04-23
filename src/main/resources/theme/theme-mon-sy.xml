@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【综合月报】 -->
+	<themeName theme_key="mon_sy_gbdays">
+		<inds>
+			<ind   indKey="mon_sr_days"  title="mon_sr_days"   />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+			<!-- 月分组 -->
+			<elumn key="mon" dim="DIM0000003" />
+		</slumn>
+	</themeName>
+	
+	
+	<!-- 【综合月报-按月统计总额】 -->
+	<themeName theme_key="mon_sy_gbmons">
+		<inds>
+			<ind   indKey="mon_sr_days"  title="mon_sr_gbmons"   />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<!-- <elumn key="day" dim="DIM0000001" /> -->
+			<!-- 月分组 -->
+			<elumn key="mon" dim="DIM0000003" />
+		</slumn>
+	</themeName>
+	
+</theme>

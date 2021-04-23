@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bsoft.mapper.RoleMapper">
+
+
+    <!-- 查询全部角色 -->
+    <select id="getAllRole" resultType="Role">
+        select *from t_role
+        <where>
+            <if test="roleName!=null and roleName!=''">
+                roledesc like concat('%',concat(#{roleName},'%'))
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过角色名查询角色信息 -->
+    <select id="getRoleByRoleDesc" resultType="Role">
+		select *from t_role where roleDesc=#{roleDesc}
+	</select>
+
+    <!-- 新增角色 -->
+    <insert id="addRole" parameterType="Role">
+        <selectKey resultType="int" order="BEFORE" keyProperty="id">
+            SELECT ROLESEQ.NEXTVAL FROM DUAL
+        </selectKey>
+        insert into t_role(id,roleDesc,status) values(#{id},#{roleDesc},#{status})
+    </insert>
+
+    <!-- 动态更新角色 -->
+    <update id="updateRole" parameterType="Role">
+        update t_role
+        <set>
+            <if test="roleDesc!=null and roleDesc!=''">
+                roleDesc=#{roleDesc},
+            </if>
+            <if test="status!=null">
+                status=#{status}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <!-- 通过id删除角色 -->
+    <delete id="deleteRoleById">
+		delete from t_role where id=#{id}
+	</delete>
+	
+	<!-- 通过角色id获取科室code -->
+	<select id="getOfficeCodeByRoleId" resultType="string">
+		select office_code from
+		t_role_office t where t.role_id=#{roleId}
+	</select>
+	
+	<!-- 通过用户id获取科室code -->
+	<select id="getOfficeCodeByUserId" resultType="RoleOffice">
+		select  distinct  b.id as "roleId",b.roledesc as "roleName",a.office_code as "officeCode" ,b.roleLevel
+		from t_role_office a
+		inner join t_role b on a.role_id=b.id
+		inner join t_user_role c on b.id=c.roleid
+		where c.userid=#{userId}
+	</select>
+	<select id="getAllUserOfficeCode"  resultType="RoleOffice">
+		select b.id as "roleId",b.roledesc as "roleName",a.office_code as "officeCode" ,c.userid as userId,b.roleLevel
+		from t_role_office a
+		inner join t_role b on a.role_id=b.id
+		inner join t_user_role c on b.id=c.roleid
+	</select>
+	
+	<!-- 通过角色id删除角色科室中间表 -->
+	<delete id="deleteRoleOfficeByroleId">
+		delete from t_role_office where role_id = #{roleId}
+	</delete>
+	
+	<!-- 保存指标维度中间表 -->
+	<insert id="saveRoleOffice">
+		insert into t_role_office(id,role_id,office_code)
+		values(
+			sys_guid(),
+			#{roleId},
+			#{officeCodes}
+			)
+	</insert>
+
+	
+
+</mapper>

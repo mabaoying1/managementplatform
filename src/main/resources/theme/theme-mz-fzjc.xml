@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【app  门诊辅助检查  fzjc】 -->
+	<themeName theme_key="index_mz_fzjc">
+		<inds>
+			<ind indKey="fjrc"/>
+			<ind indKey="fjsr"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+		<!-- 检查类型-->
+				<elumn  key="type"  dim="DIM0001438" />
+		</slumn>
+	</themeName>
+		<!-- 【app     住院辅助检查  fzjc】 -->
+	<themeName theme_key="index_zy_fzjc">
+		<inds>
+			<ind indKey="zy_fjrc"   title="fjrc" />
+			<ind indKey="zy_fjsr"    title="fjsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+				<elumn  key="type"  dim="DIM0001438" />
+		</slumn>
+	</themeName>
+</theme>

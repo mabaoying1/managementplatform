@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【app     index 首页】 -->
+	<themeName theme_key="index">
+		<inds>
+			<ind   indKey="mon_sr_days" title="index_zfy" />
+			<ind   indKey="yw_mzsr"   title="index_mzfy"/>
+			<ind   indKey="yw_zysr"  title="index_zyfy" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		
+		<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+	<!-- 【查询统计，业务门诊信息指标】 -->
+	<themeName theme_key="dr_zfy">
+		<inds>
+			<ind   indKey="mon_sr_days" title="index_zyfy" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+	
+		<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+
+	<!-- 【查询统计，住院费用信息指标】 -->
+	<themeName theme_key="dr_zyfy">
+		<inds>
+			<ind   indKey="yw_zysr" title="index_mz" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		
+		<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+</theme>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【今日处方数量】 -->
+	<themeName theme_key="index_bqhl">
+		<inds>
+			<ind indKey="bqhl_hlrc"   title="bqhl_hlrc"/>
+		</inds>
+				<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+			<!-- 护理级别 -->
+			<elumn key="hljb" dim="DIM0000064" />
+		</slumn>
+	</themeName>
+</theme>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【app     index 首页】 -->
+	<themeName theme_key="index">
+		<inds>
+			<ind indID="indb002247"  indKey="index_zfy">
+				<indName>当日住院收入</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression>[INDB001849]+[INDB001850]</calculateExpression>
+			</ind>
+			<ind indID="INDB001849"  indKey="index_mzfy">
+				<indName>当日住院收入</indName>
+			</ind>
+			<ind indID="INDB001850"  indKey="index_zyfy">
+				<indName>当日住院收入</indName>
+			</ind>
+		</inds>
+		<dim>
+			<dimDate>dim0000001</dimDate>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>dim0001651</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+			<dimMonth>dim0000003</dimMonth>
+			<dimQuarter>dim0000004</dimQuarter>
+			<dimYear>dim0000005</dimYear>
+			<dimExpenseType>dim0000812</dimExpenseType>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+		<option>
+			<!-- 是否行转列：Boolean true/false 0/1 -->
+			<line2ColOption>false</line2ColOption>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+			<!-- <pageOption>
+				<pageSize>1</pageSize>
+				<currentPage>1</currentPage>
+			</pageOption>
+			<orderOption>
+				<orderField></orderField>
+				<orderBy></orderBy>
+			</orderOption> -->
+		</option>
+	</themeName>
+	<!-- 【查询统计，业务门诊信息指标】 -->
+	<themeName theme_key="dr_zfy">
+		<inds>
+			<ind indID="indb002247">
+				<indName>当日住院收入</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression>[INDB001849]+[INDB001850]</calculateExpression>
+			</ind>
+		</inds>
+		<dim>
+			<dimDate>dim0000001</dimDate>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>dim0001651</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+			<dimMonth>dim0000003</dimMonth>
+			<dimQuarter>dim0000004</dimQuarter>
+			<dimYear>dim0000005</dimYear>
+			<dimExpenseType>dim0000812</dimExpenseType>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+		<option>
+			<!-- 是否行转列：Boolean true/false 0/1 -->
+			<line2ColOption>false</line2ColOption>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+			<pageOption>
+				<pageSize>1</pageSize>
+				<currentPage>1</currentPage>
+			</pageOption>
+			<orderOption>
+				<orderField></orderField>
+				<orderBy></orderBy>
+			</orderOption>
+		</option>
+	</themeName>
+	<!-- 【查询统计，业务门诊信息指标】 -->
+	<themeName theme_key="dr_mzfy">
+		<inds>
+			<ind indID="INDB001849">
+				<indName>当日门诊收入</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression></calculateExpression>
+			</ind>
+		</inds>
+		<dim>
+			<dimDate>dim0000001</dimDate>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>dim0001651</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+			<dimMonth>dim0000003</dimMonth>
+			<dimQuarter>dim0000004</dimQuarter>
+			<dimYear>dim0000005</dimYear>
+			<dimExpenseType>dim0000812</dimExpenseType>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+		<option>
+			<!-- 是否行转列：Boolean true/false 0/1 -->
+			<line2ColOption>false</line2ColOption>
+			<searchType>aggreBlock</searchType>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<totalOption>onlyTotal</totalOption>
+			<pageOption>
+				<pageSize>1</pageSize>
+				<currentPage>1</currentPage>
+			</pageOption>
+			<orderOption>
+				<orderField></orderField>
+				<orderBy></orderBy>
+			</orderOption>
+		</option>
+	</themeName>
+	<!-- 【查询统计，住院费用信息指标】 -->
+	<themeName theme_key="dr_zyfy">
+		<inds>
+			<ind indID="INDB001850"  indKey="index_mz">
+				<indName>当日住院收入</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression></calculateExpression>
+			</ind>
+		</inds>
+		<dim>
+			<dimDate>dim0000001</dimDate>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>dim0001651</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+			<dimMonth>dim0000003</dimMonth>
+			<dimQuarter>dim0000004</dimQuarter>
+			<dimYear>dim0000005</dimYear>
+			<dimExpenseType>dim0000812</dimExpenseType>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+		<option>
+			<!-- 是否行转列：Boolean true/false 0/1 -->
+			<line2ColOption>false</line2ColOption>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+			<pageOption>
+				<pageSize>1</pageSize>
+				<currentPage>1</currentPage>
+			</pageOption>
+			<orderOption>
+				<orderField></orderField>
+				<orderBy></orderBy>
+			</orderOption>
+		</option>
+	</themeName>
+</theme>

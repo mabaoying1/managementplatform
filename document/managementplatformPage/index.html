@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> -->
+    <!-- <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" /> -->
+    <!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no , viewport-fit=contain"  name="viewport" /> -->
+    <meta content="width=device-width,maximum-scale=1.0,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" name="viewport">
+    <!-- <meta   name="viewport" /> -->
+ 
+    <title>综合管理</title>
+    <script>
+        function calculateSize () {
+            var clientWidth = window.innerWidth || document.documentElement.clientWidth;
+            if(clientWidth >= 640){
+                clientWidth = 640;
+            }
+            var htmlSize = clientWidth/3.75;
+            document.documentElement.style.fontSize = htmlSize + 'px';
+        }
+        calculateSize();
+        window.addEventListener('resize', calculateSize);
+    </script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_574143_pnd66yvjxs.css">
+  </head>
+  
+  <body class="iphonex">
+    
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>-->
+     <!--  <script>eruda.init();</script> -->
+</html>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【统计查询  分类费用                   按财务统计】 -->
+	<themeName theme_key="cw_flfy_tj">
+		<inds>
+			<ind indKey="cw_mzsr"   title="mz_flfy" />
+			<ind indKey="cw_zysr" title="zy_flfy" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+				<elumn key="fylb" dim="DIM0001370" />
+		</slumn>
+			<param>
+			<parameter dim="DIM0001370"     dim_key="fylb"    value=""/>
+		</param>
+	</themeName>
+	
+	<!-- 【统计查询  分类费用                     按业务统计】 -->
+	<themeName theme_key="yw_flfy_tj">
+		<inds>
+			<ind   indKey="yw_mzsr"   title="mz_flfy" />
+			<ind   indKey="yw_zysr" title="zy_flfy" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="fylb" dim="DIM0001370" />
+		</slumn>
+		<param>
+			<parameter dim="DIM0001370"     dim_key="fylb"    value=""/>
+		</param>
+	</themeName>
+</theme>

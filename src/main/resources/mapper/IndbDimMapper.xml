@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bsoft.mapper.IndbDimMapper">
+	<!-- 查询全部指标 -->
+	<select id="getIndb" parameterType="map" resultType="indb">
+		select *
+		from t_indb
+	</select>
+
+	<!-- 保存指标 -->
+	<insert id="saveIndb" parameterType="indb">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select sys_guid() from dual
+		</selectKey>
+		insert into t_indb(id,indbname_key,indbname_desc,indbname_value)
+		values(#{id},#{indbNameKey},#{indbNameDesc},#{indbNameValue})
+	</insert>
+
+	<!--动态更新指标 -->
+	<update id="updateIndb" parameterType="indb">
+		update t_indb
+		<set>
+			<if test="indbNameKey !=null and indbNameKey !='' ">
+				indbname_key=#{indbNameKey},
+			</if>
+			<if test="indbNameDesc !=null and indbNameDesc !='' ">
+				indbname_desc=#{indbNameDesc},
+			</if>
+			<if test="indbNameValue !=null and indbNameValue !='' ">
+				indbname_value=#{indbNameValue},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+
+	<!-- 删除指标 -->
+	<delete id="deleteIndb">
+		delete from t_indb where id = #{indbId}
+	</delete>
+
+
+
+	<!-- 查询全部维度 -->
+	<select id="getDim" parameterType="map" resultType="dim">
+		select *from
+		t_dim
+	</select>
+
+	<!-- 保存维度 -->
+	<insert id="saveDim" parameterType="dim">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select sys_guid() from dual
+		</selectKey>
+		insert into t_dim(id,dim_key,dim_desc,dim_value)
+		values(#{id},#{dimKey},#{dimDesc},#{dimValue})
+	</insert>
+
+	<!-- 删除维度 -->
+	<delete id="deleteDim">
+		delete from t_dim where id = #{dimId}
+	</delete>
+
+	<!--动态更新维度 -->
+	<update id="updateDim" parameterType="dim">
+		update t_dim
+		<set>
+			<if test="dimKey !=null and dimKey !='' ">
+				dim_key=#{dimKey},
+			</if>
+			<if test="dimDesc !=null and dimDesc !='' ">
+				dim_desc=#{dimDesc},
+			</if>
+			<if test="dimValue !=null and dimValue !='' ">
+				dim_value=#{dimValue},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+
+	<!-- 通过指标id获取维度id -->
+	<select id="getIndbDimByIndbId" resultType="string">
+		select dim_id from
+		t_indb_dim t where t.indb_id=#{indbId}
+	</select>
+
+	<!-- 保存指标维度中间表 -->
+	<insert id="saveIndbDim">
+		insert into t_indb_dim(id,indb_id,dim_id)
+		<foreach close=")" collection="dimIds" item="item" index="index"
+			open="(" separator="union all">
+			select
+			sys_guid(),
+			#{indbId},
+			#{item}
+			from dual
+		</foreach>
+	</insert>
+
+	<!-- 通过维度id删除指标维度中间表 -->
+	<delete id="deleteIndbDimByIndbId">
+		delete from t_indb_dim where indb_id = #{indbId}
+	</delete>
+
+	<!-- 通过维度id删除指标维度中间表 -->
+	<delete id="deleteIndbDimByDimId">
+		delete from t_indb_dim where dim_id = #{dimId}
+	</delete>
+
+	<!-- 查询单个指标的维度 -->
+	<select id="getIndbDimByIndbKey" resultMap="indbDimMap">
+		select b.indbname_key, b.indbname_value, c.dim_key,
+		c.dim_value
+		from t_indb_dim a
+		left join t_indb b
+		on a.indb_id = b.id
+		left join t_dim c
+		on a.dim_id = c.id
+		where b.indbname_key = #{indbKey}
+	</select>
+	
+	<!-- 查询全部指标维度集合 -->
+	<select id="getAllIndbDim" resultMap="indbDimMap">
+		select b.indbname_key, b.indbname_value, c.dim_key,
+		c.dim_value
+		from t_indb_dim a
+		left join t_indb b
+		on a.indb_id = b.id
+		left join t_dim c
+		on a.dim_id = c.idgetIndbDimByIndbKey
+		order by b.indbname_key
+	</select>
+	
+	<!-- 指标维度 字段映射 -->
+	<resultMap id="indbDimMap" type="theme">
+		<result property="indbName_key" column="indbname_key"/>
+		<result property="indbName_value" column="indbname_value"/>
+		<!-- 对象属性集合返回值设置 -->
+		<collection property="dims" ofType="dim">
+			<result property="dimKey" column="dim_key"/>
+			<result property="dimValue" column="dim_value"/>
+		</collection>
+	</resultMap>
+	
+</mapper>

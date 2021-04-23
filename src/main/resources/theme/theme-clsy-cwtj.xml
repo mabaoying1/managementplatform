@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+
+	<!-- 材料收入   财务报表        按日期和费用类别   统计 -->
+	<themeName theme_key="cw_clsr_tj">
+		<inds>
+			<ind indID=""  indKey="cw_mz_clsr"  title="mz_clsr" />
+			<ind indID=""  indKey="cw_zy_clsr"  title="zy_clsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="day" dim="DIM0000001" />
+			<!-- 费用类别 -->
+			<elumn key="fylb" dim="DIM0000865" />
+		</slumn>
+	</themeName>
+	<!-- 材料收入   按财务 汇总 -->
+	<themeName theme_key="cw_clsr_zb">
+		<inds>
+			<ind indID="" indKey="cw_mz_clsr"  title="mz_clsr"/>
+			<ind indID=""  indKey="cw_zy_clsr"   title="zy_clsr"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+	
+		<param>
+			<!-- 费用类别 -->
+			<parameter dim="DIM0000865" dim_key="fylb" value="" />
+		</param>
+		<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+	
+	<!-- 材料收入   业务表      按日期和费用类别   统计  -->   
+		<themeName theme_key="yw_clsr_tj">
+		<inds>
+			<ind   indKey="mz_clsr"  title="mz_clsr" />
+			<ind  indKey="zy_clsr"  title="zy_clsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+				<elumn key="day" dim="DIM0000001" />
+							<!-- 挂号来源 -->
+				<elumn  key="fylb"  dim="DIM0000865" />
+		</slumn>
+	</themeName>
+	<!-- 材料收入   业务表   汇总  -->  
+	<themeName theme_key="yw_clsr_zb">
+		<inds>
+			<ind  indKey="mz_clsr"  title="mz_clsr" />
+			<ind  indKey="zy_clsr"  title="zy_clsr" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+				<elumn key="dimMonth" dim="DIM0000003" />
+		</slumn>
+		<param>
+			<parameter dim="DIM0000865" dim_key="fylb" value="" />
+		</param>
+		<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+</theme>

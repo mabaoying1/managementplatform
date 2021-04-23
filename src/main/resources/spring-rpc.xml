@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+	http://www.springframework.org/schema/beans/spring-beans.xsd         
+	http://www.bsoft.com.cn/schema/ssdev
+	http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+	
+	<ssdev:applicationDomain name="phApp" registryAddress="zookeeper://196.168.0.90:2181,196.168.0.91:2181,196.168.0.92:2181"
+ 	rpcServerWorkUrl="hessian://127.0.0.1:8280/managementPlatform/rpc/" enableLogger="false" /> 
+ 	
+ 	<!-- 设置rpc调用等待时间 -->
+	<bean id="hessianInvoker" class="ctd.net.rpc.invoker.HessianInvoker">
+		<property name="connectTimeout" value="30000"/>
+		<property name="readTimeout" value="30000"/>
+	</bean>
+	
+	
+<bean id="resHospital" class="com.bsoft.model.ResHospital">
+		<property name="officeDimCode" value="DIM0000584"/>
+		<property name="orgDimCode" value="dim0000114"/>
+		<property name="userDimCode" value="DIM0000588"/>
+	</bean>
+	
+</beans>

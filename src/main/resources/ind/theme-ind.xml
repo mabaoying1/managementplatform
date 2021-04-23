@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<inds>
+	<!-- 查询指标select * from SYS_INDICATOR t where t.indid='INDB001495'-->
+			<ind indID="INDB000755"  indKey="mzsr">
+				<indName>门诊收入（门诊总费用）</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression></calculateExpression>
+			</ind>
+			<ind indID="INDB000872"  indKey="zysr">
+				<indName>住院收入（住院总费用）</indName>
+				<expression>empty</expression>
+				<gatherDim>empty</gatherDim>
+				<indUnit>empty</indUnit>
+				<useSpe>true</useSpe>
+				<dataSub>empty</dataSub>
+				<dataOrder>empty</dataOrder>
+				<!-- special 特殊型，normal 普通型 -->
+				<indItemType>normal</indItemType>
+				<!-- 浮点类型小数位数处理长度 -->
+				<decimalLength>2</decimalLength>
+				<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+				<calculateExpression></calculateExpression>
+			</ind>
+            <ind indID="INDB001708"  indKey="jzsr">
+                <indName>急诊收入（急诊总费用）</indName>
+                <expression>empty</expression>
+                <gatherDim>empty</gatherDim>
+                <indUnit>empty</indUnit>
+                <useSpe>true</useSpe>
+                <dataSub>empty</dataSub>
+                <dataOrder>empty</dataOrder>
+                <!-- special 特殊型，normal 普通型 -->
+                <indItemType>normal</indItemType>
+                <!-- 浮点类型小数位数处理长度 -->
+                <decimalLength>2</decimalLength>
+                <!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+                <calculateExpression></calculateExpression>
+             </ind>
+	<ind indID="INDB000880" indKey="sssr">
+		<indName>手术收入（住院手术费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<!-- 财务住院手术收入 -->
+	<ind indID="INDB002513" indKey="cw_sssr">
+		<indName>财务住院手术收入（住院手术收入（含麻醉收入））</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDC000769" indKey="mz_ypsr">
+		<indName>门诊药品收入（门诊药品费用+急诊药品费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：INDC000898[INDB001849]+[INDB001850]表示由两个指标相加 
+		INDC000898  药品总费用
+		[INDC000769]  门急诊总费用
+		INDB000758   门诊药品费用
+		INDB000764   急诊药品费用
+		INDB000876 
+		-->
+		<calculateExpression>[INDB000758]+[INDB000764]</calculateExpression>
+	</ind>
+	<!-- 财务门诊药品收入 -->
+	<ind indID="INDB002451" indKey="cw_mz_ypsr">
+		<indName>财务门诊药品收入（门诊药品收入）</indName>
+	<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB000876" indKey="zy_ypsr">
+		<indName>住院药品收入（住院药品费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<!-- 财务住院药品收入 -->
+	<ind indID="INDB001714" indKey="cw_zy_ypsr">
+		<indName>财务住院药品收入（住院药品收入）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002313" indKey="ssrc">
+		<indName>手术人次（住院手术患者总人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002405" indKey="fjrc">
+		<indName>辅检人次（门急诊辅检人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002407" indKey="fjsr">
+		<indName>辅检收入（门急诊辅检费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+	</ind>
+	<ind indID="INDB002470" indKey="zy_fjrc">
+		<indName>住院辅检人次（住院辅检人次（实时））</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002471" indKey="zy_fjsr">
+		<indName>住院辅检收入（住院辅检费用（实时））</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+	</ind>
+	<ind indID="INDC000871" indKey="mon_sr_days">
+		<indName>收入（医疗总费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+        <!--门诊总费用+急诊总费用+住院总费用-->
+        <calculateExpression>[INDC000767]+[INDB000872]</calculateExpression>
+	</ind>
+	<!-- 比对 -->
+	<ind indID="INDB000707" indKey="index_mjzl">
+		<indName>门诊就诊人次（门诊就诊人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	
+	<ind indID="INDB000716" indKey="index_jzl">
+		<indName>急诊就诊人次（急诊就诊人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	
+		<ind indID="INDB000731" indKey="index_mzghrc">
+		<indName>门诊挂号人次（门诊挂号人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB001761" indKey="index_jzghrc">
+		<indName>急诊挂号人次（急诊挂号人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002455" indKey="yw_mzsr">
+		<indName>当日門診收入（门诊总费用（无诊断）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<!-- <calculateExpression>[INDB001729]+[INDB001730]</calculateExpression> -->
+	</ind>
+	<!-- 财务门诊收入 -->
+	<ind indID="INDB001722" indKey="cw_mzsr">
+		<indName>财务门诊收入（门诊医疗收入）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<!-- <calculateExpression>[INDB001729]+[INDB001730]</calculateExpression> -->
+	</ind>
+	<ind indID="INDB000872" indKey="yw_zysr">
+		<indName>当日住院收入（住院总费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002360" indKey="yw_cysr">
+		<indName>当日出院收入（出院总费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<!-- 财务住院收入 -->
+	<ind indID="INDB001723" indKey="cw_zysr">
+		<indName>财务住院收入（住院医疗收入）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+		<!-- 门急诊材料   INDC002404  =    INDB002402+INDB002403   ：急诊材料费 INDB002403 ，门诊材料费INDB002402 -->
+	<ind indID="INDC002404" indKey="mz_clsr">
+		<indName>材料收入（门急诊卫生材料费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 门诊卫生材料费用    急诊卫生材料费用 -->
+		<calculateExpression>[INDB002402]+[INDB002403]</calculateExpression>
+	</ind>
+	<!-- 财务门诊材料收入 -->
+	<ind indID="INDC001728" indKey="cw_mz_clsr">
+		<indName>财务门诊材料收入（门急诊卫生材料收入）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 门诊卫生材料费用    急诊卫生材料费用 -->
+		<calculateExpression>[INDB001315]+[INDB001727]</calculateExpression>
+	</ind>
+	<!-- 门急诊材料   INDC002404  =    INDB002402+INDB002403   ：急诊材料费 INDB002403 ，门诊材料费INDB002402 -->
+	<ind indID="INDB002383" indKey="zy_clsr">
+		<indName>材料收入（住院卫生材料费用）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<!-- 财务住院材料收入 -->
+	<ind indID="INDB001724" indKey="cw_zy_clsr">
+		<indName>财务住院材料收入（住院卫生材料收入）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002410" indKey="index_sstj_sqtc">
+		<indName>手术申请台次（手术申请例数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002462" indKey="index_sstj_aptc" >
+		<indName>手术安排台次（今日手术安排例数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002411" indKey="index_sstj_wctc">
+		<indName>手术完成台次（手术完成例数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002418" indKey="index_sfap_ind" title="index_sfap_ind">
+		<indName>手术安排明细（手术安排明细）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB002417" indKey="bqhl_hlrc" title="bqhl_hlrc">
+		<indName>当日人次（护理人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB000832" indKey="index_cryxx_jrryrc">
+		<indName>入院人次（入院人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB000834" indKey="index_cryxx_drcyrc" title="index_cryxx_drcyrc">
+		<indName>出院人次（出院总人次）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<!-- 比对  -->
+	<ind indID="INDB001538" indKey="index_cryxx_drzyrc">
+		<indName>在院人次（在院人数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型    -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002467" indKey="index_cryxx_zywzrc">
+		<indName>住院危重人次（危重人数（实时））</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+	</ind>
+	<ind indID="INDB001495" indKey="index_cryxx_cwxx">
+		<indName>实际开放床位数（实际开放床位数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDC001524" indKey="jrcf_mzcfs">
+		<indName>门诊处方数（门急诊处方数）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression>[INDB000743]+[INDB000744]</calculateExpression>
+	</ind>
+	<!-- INDB001905   -->
+	<ind indID="INDC001777" indKey="jrcf_cfmx">
+		<indName>处方明细（门急诊处方总额）</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：门诊处方总额[INDB001775]+急诊处方总额[INDB001776]表示由两个指标相加 -->
+		<calculateExpression>[INDB001775]+[INDB001776]</calculateExpression>
+	</ind>
+	<ind indID="INDB001811" indKey="jrcf_cfmx_max">
+		<indName>处方明细(最大处方额)</indName>
+		<expression>MAX</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>gather</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB001812" indKey="jrcf_cfmx_min">
+		<indName>处方明细(最小处方额)</indName>
+		<expression>MIN</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型,gather -->
+		<indItemType>gather</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>2</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+	<ind indID="INDB002409" indKey="index_jrczl_ap">
+		<indName>医生工作安排</indName>
+		<expression>empty</expression>
+		<gatherDim>empty</gatherDim>
+		<indUnit>empty</indUnit>
+		<useSpe>true</useSpe>
+		<dataSub>empty</dataSub>
+		<dataOrder>empty</dataOrder>
+		<!-- special 特殊型，normal 普通型 -->
+		<indItemType>normal</indItemType>
+		<!-- 浮点类型小数位数处理长度 -->
+		<decimalLength>0</decimalLength>
+		<!-- 计算型指标的表达式 如：[INDB001849]+[INDB001850]表示由两个指标相加 -->
+		<calculateExpression></calculateExpression>
+	</ind>
+</inds>
+

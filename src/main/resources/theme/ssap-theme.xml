@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【手术安排通知】 -->
+	<themeName theme_key="index_sfap">
+		<inds>
+			<ind indID="INDB002418"  indKey="index_sfap_ind"  title="index_sfap_ind"/>
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />
+			<!-- 患者姓名 -->
+				<elumn key="patientName"   dim="DIM0001455" />
+							<!-- 科室 -->
+				<elumn  key="dept"  dim="DIM0001278" />
+						<!-- 洗手护士 -->
+				<elumn key="sshs"   dim="DIM0001460" />
+						<!-- 巡回护士 -->
+				<elumn  key="xhhs"   dim="DIM0001461" />
+						<!-- 副麻医生 -->
+				<elumn  key="fmys"  dim="DIM0001459" />
+						<!-- 医生 -->
+				<elumn  key="doctor"   dim="DIM0000282" />
+						<!--主医生
+				<elumn  key="mainDoc"  dim="DIM0001351" />-->
+						<!-- 手术时间
+				<elumn  key="sssj"  dim="DIM0001038" /> -->
+						<!-- 手术名称 -->
+				<elumn key="ssmc"   dim="DIM0000843" />
+						<!-- 患者性别 -->
+				<elumn key="patientSex"   dim="DIM0001456" />
+						<!-- 患者年龄 -->
+				<elumn  key="patientAge"  dim="DIM0001458" />	
+					<!--病区				<elumn  key="dept"  dim="DIM0001031" />	 -->
+		</slumn>
+	</themeName>
+		<!-- 【手术情况统计】 -->
+	<themeName theme_key="index_sstj">
+		<inds>
+			<ind  indKey="index_sstj_sqtc"  title="index_sstj_sqtc"/>
+			<ind  indKey="index_sstj_aptc"  title="index_sstj_aptc"  />
+			<ind  indKey="index_sstj_wctc"  title="index_sstj_wctc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dateTime" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+</theme>

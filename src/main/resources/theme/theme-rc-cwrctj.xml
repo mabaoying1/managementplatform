@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<!-- 【统计查询  人次           医生        按财务汇总】 -->
+	<themeName theme_key="cw_rc_rctj">
+		<inds>
+			<ind    indKey="index_mjzl"    title="mzrc"/>
+			<ind   indKey="ssrc"  title="ssrc"  />
+			<ind     indKey="index_cryxx_jrryrc"  title="ryrc"/>
+			<ind    indKey="index_cryxx_drcyrc" title="cyrc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001264</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+			<option>
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+	<!-- 【统计查询  人次           医生        按业务汇总】 -->
+	<themeName theme_key="yw_rc_rctj">
+		<inds>
+			<ind    indKey="index_mzghrc"    title="mzrc"/>
+			<ind    indKey="index_jzghrc"    title="jzrc"/>
+			<ind   indKey="ssrc"  title="ssrc"  />
+			<ind     indKey="index_cryxx_jrryrc"  title="ryrc"/>
+			<ind    indKey="index_cryxx_drcyrc" title="cyrc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="dimMonth" dim="DIM0000003" />
+		</slumn>
+			<option>
+			<!-- 查询类型：onlyTotal ：合计 -->
+			<searchType>aggreBlock</searchType>
+			<totalOption>onlyTotal</totalOption>
+		</option>
+	</themeName>
+
+	<!-- 【统计人次按业务天统计】 -->
+	<themeName theme_key="yw_rc_rctj2">
+		<inds>
+			<ind    indKey="index_mzghrc"    title="mzrc"/>
+			<ind    indKey="index_jzghrc"    title="jzrc"/>
+			<ind   indKey="ssrc"  title="ssrc"  />
+			<ind     indKey="index_cryxx_jrryrc"  title="ryrc"/>
+			<ind    indKey="index_cryxx_drcyrc" title="cyrc" />
+		</inds>
+		<dim>
+			<dimOrganization>dim0000114</dimOrganization>
+			<dimDept>DIM0001278</dimDept>
+			<dimDoctor>dim0000282</dimDoctor>
+		</dim>
+		<slumn>
+			<elumn key="doc" dim="DIM0000001" />
+		</slumn>
+	</themeName>
+</theme>
